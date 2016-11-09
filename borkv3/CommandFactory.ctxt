@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.params=
-comment0.target=zeitz_borkv3.CommandFactory\ instance()
+comment0.target=CommandFactory\ instance()
 comment1.params=
 comment1.target=CommandFactory()
 comment2.params=command
-comment2.target=zeitz_borkv3.Command\ parse(java.lang.String)
+comment2.target=Command\ parse(java.lang.String)
 numComments=3

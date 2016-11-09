@@ -1,4 +1,11 @@
-
+/**
+ * @author Adam Hoff
+ * 
+ * The Item class creates objects of type Item. This class is responsible for the construction
+ * of items that can be interacted with throughout the bork program. Some methods here include 
+ * reading an Item object's name or weight.
+ * 
+ */
  
 
 import java.util.Scanner;
@@ -8,11 +15,11 @@ public class Item {
 
     static class NoItemException extends Exception {}
 
-    /** @param eventName this is a new variable in our updated project
+    /** @param eventName The value of eventName.
      * 
      */
     public String eventName;
-    /** @param numScore this is a new variable in our updated project
+    /** @param numScore This is the value of numScore.
      * 
      */
     public int numScore;
@@ -66,12 +73,15 @@ public class Item {
         return primaryName;
     }
     
-    /**these are the two new methods in our updated project
+    /**This method returns the string value of @param eventName .
      * 
      */
-    public String get EventName() {
+    public String getEventName() {
         return eventName;
     }
+    /**
+     * This method returns the int value of @param numScore .
+     */
     public int getNumScore() {
         return numScore;
     }

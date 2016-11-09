@@ -1,4 +1,10 @@
-
+/**
+ * @author Adam Hoff
+ * 
+ * The room class is responsible for the construction objects of type Room. Rooms are what make up
+ * the Dungeon class as a whole. 
+ * 
+ */
  
 import java.util.Hashtable;
 import java.util.ArrayList;
@@ -17,7 +23,8 @@ public class Room {
     private boolean beenHere;
     private ArrayList<Item> contents;
     private ArrayList<Exit> exits;
-    /** @param creatureName and @param creatureItems, these are new params.
+    /** @param creatureName A string for a specified creature's name.
+     *  @param creatureItems A hashtable for the contents of a creature's items.
      * 
      */
     private String creatureName;
@@ -192,13 +199,17 @@ public class Room {
         return contents;
     }
     
-    /** these are thte new methods for updated projected
+    /** This method is used to return the value of @param creatureName .
      * 
      */
     protected String getCreatureName() {
         return creatureName;
     }
+    /**
+     * This method is used to return the values for the contents of a
+     * specified creature's inventory.
+     */
     protected String getContentForName(String name) {
-        return this.name.getCreatureInventory();
+        return "hi";
     }
 }
