@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=s
+comment0.target=Item(java.util.Scanner)
+comment1.params=name
+comment1.target=boolean\ goesBy(java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getPrimaryName()
+comment3.params=verb
+comment3.target=java.lang.String\ getMessageForVerb(java.lang.String)
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5

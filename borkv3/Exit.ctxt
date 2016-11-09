@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=dir\ src\ dest
+comment0.target=Exit(java.lang.String,\ zeitz_borkv3.Room,\ zeitz_borkv3.Room)
+comment1.params=s\ d
+comment1.target=Exit(java.util.Scanner,\ zeitz_borkv3.Dungeon)
+comment1.text=\ Given\ a\ Scanner\ object\ positioned\ at\ the\ beginning\ of\ an\ "exit"\ file\r\n\ \ \ \ \ \ \ \ entry,\ read\ and\ return\ an\ Exit\ object\ representing\ it.\ \r\n\ \ \ \ \ \ \ \ @param\ d\ The\ dungeon\ that\ contains\ this\ exit\ (so\ that\ Room\ objects\ \r\n\ \ \ \ \ \ \ \ may\ be\ obtained.)\r\n\ \ \ \ \ \ \ \ @throws\ NoExitException\ The\ reader\ object\ is\ not\ positioned\ at\ the\r\n\ \ \ \ \ \ \ \ start\ of\ an\ exit\ entry.\ A\ side\ effect\ of\ this\ is\ the\ reader's\ cursor\r\n\ \ \ \ \ \ \ \ is\ now\ positioned\ one\ line\ past\ where\ it\ was.\r\n\ \ \ \ \ \ \ \ @throws\ IllegalDungeonFormatException\ A\ structural\ problem\ with\ the\r\n\ \ \ \ \ \ \ \ dungeon\ file\ itself,\ detected\ when\ trying\ to\ read\ this\ room.\r\n
+comment2.params=
+comment2.target=void\ init()
+comment3.params=
+comment3.target=java.lang.String\ describe()
+comment4.params=
+comment4.target=java.lang.String\ getDir()
+comment5.params=
+comment5.target=zeitz_borkv3.Room\ getSrc()
+comment6.params=
+comment6.target=zeitz_borkv3.Room\ getDest()
+numComments=7
