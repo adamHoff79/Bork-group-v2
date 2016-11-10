@@ -6,7 +6,6 @@
  * reading an Item object's name or weight.
  * 
  */
- 
 
 import java.util.Scanner;
 import java.util.Hashtable;
@@ -23,15 +22,13 @@ public class Item {
      * 
      */
     public int numScore;
-    
-    
+
     private String primaryName;
     private int weight;
     private Hashtable<String,String> messages;
 
-
     Item(Scanner s) throws NoItemException,
-        Dungeon.IllegalDungeonFormatException {
+    Dungeon.IllegalDungeonFormatException {
 
         messages = new Hashtable<String,String>();
 
@@ -53,17 +50,24 @@ public class Item {
             }
             String[] verbParts = verbLine.split(":");
             messages.put(verbParts[0],verbParts[1]);
-            
+
             verbLine = s.nextLine();
         }
     }
 
+    /**
+     * Returns a boolean value if the item has/doesn't have any other aliases.
+     */
     boolean goesBy(String name) {
         // could have other aliases
         return this.primaryName.equals(name);
     }
 
-    String getPrimaryName() { return primaryName; }
+    /**
+     * @return primaryName returns the primary name of the item.
+     */
+    String getPrimaryName() { 
+        return primaryName; }
 
     public String getMessageForVerb(String verb) {
         return messages.get(verb);
@@ -72,13 +76,14 @@ public class Item {
     public String toString() {
         return primaryName;
     }
-    
+
     /**This method returns the string value of @param eventName .
      * 
      */
     public String getEventName() {
         return eventName;
     }
+
     /**
      * This method returns the int value of @param numScore .
      */

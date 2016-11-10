@@ -86,13 +86,16 @@ public class Room {
         }
 
         // throw away delimiter
+          
         if (!lineOfDesc.equals(Dungeon.SECOND_LEVEL_DELIM)) {
             throw new Dungeon.IllegalDungeonFormatException("No '" +
                 Dungeon.SECOND_LEVEL_DELIM + "' after room.");
         }
     }
 
-    // Common object initialization tasks.
+    /**
+     * Common object initialization tasks.
+     */ 
     private void init() {
         contents = new ArrayList<Item>();
         exits = new ArrayList<Exit>();
@@ -103,8 +106,8 @@ public class Room {
 
     void setDesc(String desc) { this.desc = desc; }
 
-    /*
-     * Store the current (changeable) state of this room to the writer
+    /**
+     * Stores the current (changeable) state of this room to the writer
      * passed.
      */
     void storeState(PrintWriter w) throws IOException {
@@ -120,6 +123,9 @@ public class Room {
         w.println(Dungeon.SECOND_LEVEL_DELIM);
     }
 
+    /**
+     * Restores state of this room room given a scanner s and a dungeon d
+     */
     void restoreState(Scanner s, Dungeon d) throws 
         GameState.IllegalSaveFormatException {
 
@@ -145,6 +151,9 @@ public class Room {
         }
     }
 
+    /**
+     * Gives the description for the room.
+     */
     public String describe() {
         String description;
         if (beenHere) {
@@ -174,18 +183,30 @@ public class Room {
         return null;
     }
 
+    /**
+     * Adds an Exit.
+     */
     void addExit(Exit exit) {
         exits.add(exit);
     }
 
+    /**
+     * Adds an Item.
+     */
     void add(Item item) {
         contents.add(item);
     }
 
+    /**
+     * Removes an Item.
+     */
     void remove(Item item) {
         contents.remove(item);
     }
 
+    /**
+     * @return item returns the item specified in the paramaters.
+     */
     Item getItemNamed(String name) throws Item.NoItemException {
         for (Item item : contents) {
             if (item.goesBy(name)) {
@@ -195,11 +216,14 @@ public class Room {
         throw new Item.NoItemException();
     }
 
+    /**
+     * @return contents returns the contents of items.
+     */
     ArrayList<Item> getContents() {
         return contents;
     }
     
-    /** This method is used to return the value of @param creatureName .
+    /** This method is used to return the value of creatureName.
      * 
      */
     protected String getCreatureName() {
